@@ -1,0 +1,44 @@
+const Discord = require("discord.js");
+module.exports.run = (client, message, args) => {
+  if(message.channel.type === "dm") return message.reply("you can't use that in DM");
+    let items = [
+    'https://cdn.discordapp.com/emojis/506574063733309441.png?v=1', //iron
+    'https://cdn.discordapp.com/emojis/506574063754280974.png?v=1', //diamond
+    'https://cdn.discordapp.com/emojis/506574063519662081.png?v=1', //gold
+    'https://cdn.discordapp.com/emojis/506574064031367199.png?v=1', //wood p
+    'https://cdn.discordapp.com/emojis/506574063540502529.png?v=1', //iron p
+    'https://cdn.discordapp.com/emojis/506574063955738630.png?v=1', //gold pickaxe
+    'https://cdn.discordapp.com/emojis/506574063972515849.png?v=1', //diamond pickaxe  
+    'https://cdn.discordapp.com/attachments/507220891894284330/507984722438389760/MC_Heart.png', //heart
+    'https://cdn.discordapp.com/emojis/507897773719420928.png?v=1', //wolf
+    'https://cdn.discordapp.com/emojis/507897773874479134.png?v=1', //tnt
+    'https://cdn.discordapp.com/emojis/507897773689929728.png?v=1', //face
+    'https://cdn.discordapp.com/emojis/507933985633075212.gif?v=1'
+  ]
+  let name = [
+    'Iron',
+    'Diamond',
+    'Gold',
+    'PickAxe',
+    'PickAxe',
+    'PickAxe',
+    'PickAxe',
+    'Heart',
+    'Wolf',
+    'TNT',
+    'LOL',
+    'creeper'
+  ]
+  let random = Math.floor(Math.random() * items.length)
+  console.log(random)
+  let q = name[random]
+  message.guild.createEmoji(items[random], name[random]).then((s) => {
+    let emoji = client.emojis.find(a => a.name === q)
+    message.channel.send(`${emoji}`).then(a => {
+      message.guild.deleteEmoji(s)
+    })
+  })
+}
+module.exports.help = {
+  name: "emoji"
+}
