@@ -1,1 +1,1 @@
-# bot-mc
+# minecraft-bot

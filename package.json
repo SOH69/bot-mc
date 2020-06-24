@@ -1,0 +1,27 @@
+{
+  "name": "libermods",
+  "version": "1.0.2",
+  "description": "Un simple bot de moderacion para LiberMods Origenes creado por ZxFrankxZ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "ZxFrankxZ",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "express": "^4.16.4",
+    "fs": "^0.0.2",
+    "gamedig": "^2.0.20",
+    "sqlite": "^3.0.0",
+    "request": "^2.88.0",
+    "moment": "^2.22.2",
+    "webmonitor": "^0.0.5",
+    "mojang-api": "^0.0.2",
+    "translate": "^1.0.3"
+  },
+  "engines": {
+    "node": "10.x"
+  }
+}
